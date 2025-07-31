@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ETRM Glossary - Energy Trading & Risk Management Dictionary</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-chart-line"></i>
+                    <h1>ETRM Glossary</h1>
+                </div>
+                <nav class="nav">
+                    <a href="#home" class="nav-link active">Home</a>
+                    <a href="#glossary" class="nav-link">Glossary</a>
+                    <a href="#categories" class="nav-link">Categories</a>
+                    <a href="#about" class="nav-link">About</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h2>Energy Trading & Risk Management Dictionary</h2>
+                    <p>Your comprehensive resource for understanding complex ETRM concepts, terminology, and practices in commodity and energy markets.</p>
+                    
+                    <div class="search-container">
+                        <div class="search-box">
+                            <i class="fas fa-search"></i>
+                            <input type="text" id="searchInput" placeholder="Search for ETRM terms, concepts, or definitions...">
+                            <button id="searchBtn" class="search-btn">Search</button>
+                        </div>
+                        <div class="search-suggestions" id="searchSuggestions"></div>
+                    </div>
+
+                    <div class="quick-stats">
+                        <div class="stat">
+                            <span class="stat-number" id="totalTerms">500+</span>
+                            <span class="stat-label">Terms Defined</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">12</span>
+                            <span class="stat-label">Categories</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">Regular</span>
+                            <span class="stat-label">Updates</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Categories Section -->
+        <section id="categories" class="categories">
+            <div class="container">
+                <h2>Browse by Category</h2>
+                <div class="category-grid">
+                    <div class="category-card" data-category="trading">
+                        <i class="fas fa-exchange-alt"></i>
+                        <h3>Trading</h3>
+                        <p>Spot trading, forwards, futures, swaps, and execution strategies</p>
+                        <span class="term-count">85+ terms</span>
+                    </div>
+                    <div class="category-card" data-category="risk">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Risk Management</h3>
+                        <p>VaR, credit risk, market risk, operational risk, and hedging</p>
+                        <span class="term-count">65+ terms</span>
+                    </div>
+                    <div class="category-card" data-category="derivatives">
+                        <i class="fas fa-chart-area"></i>
+                        <h3>Derivatives</h3>
+                        <p>Options, swaps, collars, and exotic derivatives</p>
+                        <span class="term-count">70+ terms</span>
+                    </div>
+                    <div class="category-card" data-category="commodities">
+                        <i class="fas fa-oil-can"></i>
+                        <h3>Commodities</h3>
+                        <p>Oil, gas, power, metals, and agricultural products</p>
+                        <span class="term-count">60+ terms</span>
+                    </div>
+                    <div class="category-card" data-category="valuation">
+                        <i class="fas fa-calculator"></i>
+                        <h3>Valuation</h3>
+                        <p>Pricing models, mark-to-market, fair value, and P&L</p>
+                        <span class="term-count">45+ terms</span>
+                    </div>
+                    <div class="category-card" data-category="regulation">
+                        <i class="fas fa-gavel"></i>
+                        <h3>Regulation</h3>
+                        <p>EMIR, MiFID, Dodd-Frank, and compliance requirements</p>
+                        <span class="term-count">40+ terms</span>
+                    </div>
+                    <div class="category-card" data-category="markets">
+                        <i class="fas fa-globe"></i>
+                        <h3>Market Structure</h3>
+                        <p>Exchanges, OTC markets, clearing, and settlement</p>
+                        <span class="term-count">35+ terms</span>
+                    </div>
+                    <div class="category-card" data-category="technology">
+                        <i class="fas fa-microchip"></i>
+                        <h3>Technology</h3>
+                        <p>ETRM systems, algorithms, and digital transformation</p>
+                        <span class="term-count">30+ terms</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Glossary Section -->
+        <section id="glossary" class="glossary">
+            <div class="container">
+                <div class="glossary-header">
+                    <h2>Complete Glossary</h2>
+                    <div class="filters">
+                        <select id="categoryFilter">
+                            <option value="all">All Categories</option>
+                            <option value="trading">Trading</option>
+                            <option value="risk">Risk Management</option>
+                            <option value="derivatives">Derivatives</option>
+                            <option value="commodities">Commodities</option>
+                            <option value="valuation">Valuation</option>
+                            <option value="regulation">Regulation</option>
+                            <option value="markets">Market Structure</option>
+                            <option value="technology">Technology</option>
+                        </select>
+                        <select id="sortFilter">
+                            <option value="alphabetical">Alphabetical</option>
+                            <option value="category">By Category</option>
+                            <option value="recent">Recently Added</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="alphabet-nav">
+                    <a href="#" data-letter="ALL" class="letter-btn active">ALL</a>
+                    <a href="#" data-letter="A" class="letter-btn">A</a>
+                    <a href="#" data-letter="B" class="letter-btn">B</a>
+                    <a href="#" data-letter="C" class="letter-btn">C</a>
+                    <a href="#" data-letter="D" class="letter-btn">D</a>
+                    <a href="#" data-letter="E" class="letter-btn">E</a>
+                    <a href="#" data-letter="F" class="letter-btn">F</a>
+                    <a href="#" data-letter="G" class="letter-btn">G</a>
+                    <a href="#" data-letter="H" class="letter-btn">H</a>
+                    <a href="#" data-letter="I" class="letter-btn">I</a>
+                    <a href="#" data-letter="J" class="letter-btn">J</a>
+                    <a href="#" data-letter="K" class="letter-btn">K</a>
+                    <a href="#" data-letter="L" class="letter-btn">L</a>
+                    <a href="#" data-letter="M" class="letter-btn">M</a>
+                    <a href="#" data-letter="N" class="letter-btn">N</a>
+                    <a href="#" data-letter="O" class="letter-btn">O</a>
+                    <a href="#" data-letter="P" class="letter-btn">P</a>
+                    <a href="#" data-letter="Q" class="letter-btn">Q</a>
+                    <a href="#" data-letter="R" class="letter-btn">R</a>
+                    <a href="#" data-letter="S" class="letter-btn">S</a>
+                    <a href="#" data-letter="T" class="letter-btn">T</a>
+                    <a href="#" data-letter="U" class="letter-btn">U</a>
+                    <a href="#" data-letter="V" class="letter-btn">V</a>
+                    <a href="#" data-letter="W" class="letter-btn">W</a>
+                    <a href="#" data-letter="X" class="letter-btn">X</a>
+                    <a href="#" data-letter="Y" class="letter-btn">Y</a>
+                    <a href="#" data-letter="Z" class="letter-btn">Z</a>
+                </div>
+
+                <div class="terms-container" id="termsContainer">
+                    <!-- Terms will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="container">
+                <div class="about-content">
+                    <h2>About ETRM Glossary</h2>
+                    <div class="about-grid">
+                        <div class="about-item">
+                            <i class="fas fa-lightbulb"></i>
+                            <h3>Comprehensive Coverage</h3>
+                            <p>Our glossary covers all aspects of Energy Trading and Risk Management, from basic concepts to advanced strategies and regulations.</p>
+                        </div>
+                        <div class="about-item">
+                            <i class="fas fa-users"></i>
+                            <h3>Expert Reviewed</h3>
+                            <p>All definitions are reviewed by industry experts and practitioners with decades of experience in commodity and energy markets.</p>
+                        </div>
+                        <div class="about-item">
+                            <i class="fas fa-sync-alt"></i>
+                            <h3>Regularly Updated</h3>
+                            <p>We continuously update our content to reflect the latest market developments, regulations, and industry best practices.</p>
+                        </div>
+                        <div class="about-item">
+                            <i class="fas fa-search"></i>
+                            <h3>Easy to Navigate</h3>
+                            <p>Advanced search functionality, category filters, and cross-references make finding information quick and efficient.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>ETRM Glossary</h3>
+                    <p>Your trusted resource for Energy Trading & Risk Management terminology and concepts.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#glossary">Glossary</a></li>
+                        <li><a href="#categories">Categories</a></li>
+                        <li><a href="#about">About</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Email: info@etrmglossary.com</p>
+                    <p>Phone: +1 (555) 123-4567</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 ETRM Glossary. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Term Detail Modal -->
+    <div id="termModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="modal-body">
+                <h2 id="modalTermName"></h2>
+                <div class="term-category" id="modalTermCategory"></div>
+                <div class="term-definition" id="modalTermDefinition"></div>
+                <div class="term-details" id="modalTermDetails"></div>
+                <div class="related-terms" id="modalRelatedTerms"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
